@@ -14,7 +14,7 @@ This repository is a very bare-bones Ruby On Rails app called "Bark" that allows
 
 ### Review Order
 
-The newest reviews should be at the top of the list. 
+<!-- The newest reviews should be at the top of the list.  -->
 
 ### Review Deletion
 
