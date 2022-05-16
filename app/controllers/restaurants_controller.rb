@@ -11,7 +11,8 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show
-    @reviews = @restaurant.reviews
+    @reviews = @restaurant.reviews.sort_by(&:created_at).reverse
+    # binding.pry
     @new_review = Review.new if current_user
   end
 
