@@ -17,6 +17,13 @@
         <td><%= restaurant.name %></td>
         <td><%= restaurant.user_id %></td>
         <td><%= link_to 'Show', restaurant %></td>
+ 
+
+ <% if restaurant.images.attached? %>
+        <td><%= image_tag restaurant.image.variant(resize: "500x500")%></td>
+        <% end %> 
+
+
         
       <% if restaurant.user === current_user %>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>

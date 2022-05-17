@@ -7,6 +7,11 @@
 <p>
   <strong>Name:</strong>
   <%= @restaurant.name %>
+    <% if @restaurant.images.any? %>
+      <% @restaurant.images.each do |image| %>
+         <%= image %>
+    <% end %> 
+  <% end %>
 </p>
 
 <p>
@@ -15,6 +20,12 @@
 </p>
 
 <%= render 'reviews/form' %>
-<h2>Reviews - <%= @rating if @rating %> /5 stars</h2>
+<h2>Reviews - 
+<% if @rating.nan? %>
+ not yet rated
+<% else %>
+<%= @rating %>/5 stars</h2>
+<% end %>
+
 
 <%= render @reviews if @reviews.any? %>
