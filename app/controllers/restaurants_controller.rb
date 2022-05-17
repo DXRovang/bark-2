@@ -32,8 +32,10 @@ class RestaurantsController < ApplicationController
   # POST /restaurants
   # POST /restaurants.json
   def create
+    binding.pry
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.user = current_user
+    binding.pry
 
     respond_to do |format|
       if @restaurant.save

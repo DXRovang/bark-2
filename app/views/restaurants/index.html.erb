@@ -20,7 +20,7 @@
  
 
  <% if restaurant.images.attached? %>
-        <td><%= image_tag restaurant.image.variant(resize: "500x500")%></td>
+        <td><%= image_tag restaurant.images[0], style: 'height:15vh; width:auto;'%></td>
         <% end %> 
 
 

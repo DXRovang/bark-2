@@ -9,7 +9,7 @@
   <%= @restaurant.name %>
     <% if @restaurant.images.any? %>
       <% @restaurant.images.each do |image| %>
-         <%= image %>
+         <%= image_tag image, style: 'height:15vh; width:auto;'%>
     <% end %> 
   <% end %>
 </p>
