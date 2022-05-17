@@ -32,10 +32,10 @@ class RestaurantsController < ApplicationController
   # POST /restaurants
   # POST /restaurants.json
   def create
-    binding.pry
+    # binding.pry
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.user = current_user
-    binding.pry
+    # binding.pry
 
     respond_to do |format|
       if @restaurant.save
@@ -52,6 +52,7 @@ class RestaurantsController < ApplicationController
   # PATCH/PUT /restaurants/1.json
   def update
     respond_to do |format|
+      # binding.pry
       if @restaurant.update(restaurant_params)
         format.html { redirect_to @restaurant, notice: 'Restaurant was successfully updated.' }
         format.json { render :show, status: :ok, location: @restaurant }
@@ -80,6 +81,6 @@ class RestaurantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :images)
+      params.require(:restaurant).permit(:name, :images=>[])
     end
 end

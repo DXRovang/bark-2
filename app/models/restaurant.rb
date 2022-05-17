@@ -3,6 +3,7 @@ class Restaurant < ApplicationRecord
   has_many :reviews
   has_many_attached :images
 
+  validates :name, presence: true 
 end
 
 # <%= form_with model: @restaurant, local: true do |form| %>
