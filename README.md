@@ -18,11 +18,11 @@ This repository is a very bare-bones Ruby On Rails app called "Bark" that allows
 
 ### Review Deletion
 
-Users need to be able to delete their own reviews. There is already a button, but it doesn't work. 
+<!-- Users need to be able to delete their own reviews. There is already a button, but it doesn't work.  -->
 
 ### Average Rating
 
-On the restaurant show page we need to see what it's 5 star rating is. 
+<!-- On the restaurant show page we need to see what it's 5 star rating is.  -->
 
 ### CSS Issues
 There seems to be some funky CSS hover animations going on, especially in
@@ -30,8 +30,8 @@ the navbar. Clean these up so things are more readable and pretty.
 
 ### Security Problem
 
-We noticed that anyone can modify or delete any restaurant. Please make sure 
-that only the restaurant owner has this access. 
+<!-- We noticed that anyone can modify or delete any restaurant. Please make sure 
+that only the restaurant owner has this access.  -->
 
 ### Missing Home Page
 

@@ -12,7 +12,11 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/1.json
   def show
     @reviews = @restaurant.reviews.sort_by(&:created_at).reverse
-    # binding.pry
+    @rating = 0
+    @reviews.each do |r|
+      @rating = @rating + r.rating
+    end
+    @rating = (@rating.to_f/@reviews.length).round(1)
     @new_review = Review.new if current_user
   end
 
