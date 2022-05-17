@@ -3,8 +3,7 @@ class OwnerNotificationMailer < ApplicationMailer
 
   def owner_notification_email
     @user = params[:user]
-    @review = params[:review]
-    binding.pry
+    # @review = params[:review]
     mail(to: @user.email, subject: "You have a new review!")
   end
 

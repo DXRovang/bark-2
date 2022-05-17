@@ -12,9 +12,7 @@ class ReviewsController < ApplicationController
   end
 
 def destroy
-    # binding.pry
     @restaurant = Restaurant.find(params[:id])
-    # binding.pry
     @review = @restaurant.reviews.find(params[:restaurant_id])
     @review.destroy
     redirect_to restaurant_path(@restaurant)
