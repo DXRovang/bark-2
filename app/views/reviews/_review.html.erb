@@ -4,7 +4,15 @@
     <h6 class="card-subtitle mb-2 text-muted">Rating: <%= review.rating %></h6>
     <p class="card-text"><%= review.comment %></p>
     <% if current_user === review.user %>
-    <a href="#" class="card-link">Delete</a>
+        <%
+=begin%>
+ <a href="#" class="card-link">Delete</a> 
+<%
+=end%>
+  
+
+ <%= button_to "Delete", restaurant_review_path(review), method: :delete %> 
+
     <% end %>
   </div>
 </div>

@@ -10,8 +10,10 @@ class ReviewsController < ApplicationController
   end
 
 def destroy
-    @restaurant = Post.find(params[:restaurant_id])
-    @review = @restaurant.reviews.find(params[:id])
+    # binding.pry
+    @restaurant = Restaurant.find(params[:id])
+    # binding.pry
+    @review = @restaurant.reviews.find(params[:restaurant_id])
     @review.destroy
     redirect_to restaurant_path(@restaurant)
 end
