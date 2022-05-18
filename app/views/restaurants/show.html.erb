@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
-      <% if @restaurant.user === current_user %>
+<% if @restaurant.user === current_user %>
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <% end %>
 <%= link_to 'Back', restaurants_path %>
 
 <p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
+  <h3><%= @restaurant.name %></h3>
     <% if @restaurant.images.any? %>
       <% @restaurant.images.each do |image| %>
          <%= image_tag image, style: 'height:15vh; width:auto;'%>
@@ -14,18 +13,12 @@
   <% end %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @restaurant.user_id %>
-</p>
-
 <%= render 'reviews/form' %>
 <h2>Reviews - 
 <% if @rating.nan? %>
  not yet rated
 <% else %>
-<%= @rating %>/5 stars</h2>
+  <%= @rating %>/5 stars</h2>
 <% end %>
-
 
 <%= render @reviews if @reviews.any? %>

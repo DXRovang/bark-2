@@ -35,8 +35,8 @@ that only the restaurant owner has this access.  -->
 
 ### Missing Home Page
 
-Our app doesn't have a home page yet! We'd like there to be one that lists all
-restaurants ranked by rating. If it was paginated that would be a plus! 
+<!-- Our app doesn't have a home page yet! We'd like there to be one that lists all
+restaurants ranked by rating. If it was paginated that would be a plus!  -->
 
 ### Owner Alerts
 
@@ -47,8 +47,8 @@ great fit here.
 
 ### Test Suite
 
-This is just a play app, but we still want to see some tests written. No need for full test coverage, we just want to see some examples of how you think about and how you write tests. 
-Note: This repo is setup and ready to go with plain old minitest. Feel free to install and use Rspec if that is what you're comfortable with! 
+<!-- This is just a play app, but we still want to see some tests written. No need for full test coverage, we just want to see some examples of how you think about and how you write tests. 
+Note: This repo is setup and ready to go with plain old minitest. Feel free to install and use Rspec if that is what you're comfortable with!  -->
 
 ### Restaurant Pictures
 
