@@ -6,6 +6,28 @@ class RestaurantsController < ApplicationController
   # GET /restaurants.json
   def index
     @restaurants = Restaurant.all
+
+    # @restaurant_hash = {}
+
+    # @restaurants.each do |restaurant|
+    #   @rating = 0
+    #   @reviews = restaurant.reviews
+    #   @reviews.each do |r|
+    #     @rating = @rating + r.rating
+    #   end
+    #   @rating = (@rating.to_f/@reviews.length).round(1)
+    #   if @rating.to_f.nan?
+    #     @rating = 0
+    #   end
+    #   @restaurant_hash[@rating.to_f] = restaurant.id
+    # end
+
+    # @sorted_hash = @restaurant_hash.sort_by {|k,v| k}.reverse
+    # @sorted_restaurants = []
+    # @sorted_hash.each do |h|
+    #   @sorted_restaurants.push(Restaurant.find_by(id: h[1]))
+    # end
+ 
   end
 
   # GET /restaurants/1
@@ -17,6 +39,7 @@ class RestaurantsController < ApplicationController
       @rating = @rating + r.rating
     end
     @rating = (@rating.to_f/@reviews.length).round(1)
+
     @new_review = Review.new if current_user
   end
 

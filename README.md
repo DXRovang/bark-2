@@ -25,8 +25,8 @@ This repository is a very bare-bones Ruby On Rails app called "Bark" that allows
 <!-- On the restaurant show page we need to see what it's 5 star rating is.  -->
 
 ### CSS Issues
-There seems to be some funky CSS hover animations going on, especially in
-the navbar. Clean these up so things are more readable and pretty. 
+<!-- There seems to be some funky CSS hover animations going on, especially in
+the navbar. Clean these up so things are more readable and pretty.  -->
 
 ### Security Problem
 
