@@ -5,10 +5,13 @@ class ReviewsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = @restaurant.reviews.new(params[:review].permit(:rating, :comment))
     @review.user = current_user
-    if @review.save
-      OwnerNotificationMailer.with(current_user: @user, review: @review).owner_notification_email.deliver_later
-    end
-    redirect_to restaurant_path(@restaurant)    
+    respond_to do |format|
+      if @review.save
+        OwnerNotificationMailer.with(user: @review.user).owner_notification_email.deliver_later
+        format.html 
+      end
+    end  
+    redirect_to restaurant_path(@restaurant) 
   end
 
 def destroy
