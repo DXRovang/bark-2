@@ -18,7 +18,7 @@
 <% if @rating.nan? %>
  not yet rated
 <% else %>
-  <%= @rating %>/5 stars</h2>
+  <%= @rating %>/5 <%= image_tag("star.png", size: "25x25", alt: "star") %></h2>
 <% end %>
 
 <%= render @reviews if @reviews.any? %>
