@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/', to: "restaurants#index"
+  
   resources :restaurants do
     resources :reviews
   end
